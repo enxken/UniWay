@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniWay · путеводитель первокурсника СПбПУ</title>
+  <meta name="description" content="Ответы на главные вопросы первокурсника СПбПУ: учёба, расписание, общежития, здоровье и объединения.">
+  <meta property="og:title" content="UniWay · путеводитель первокурсника СПбПУ">
+  <meta property="og:description" content="Ответы на главные вопросы про учёбу, расписание, кампусы и общежития Политеха">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="UniWay">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="UniWay · путеводитель первокурсника СПбПУ">
+  <meta name="twitter:description" content="Ответы на главные вопросы про учёбу, расписание, кампусы и общежития Политеха">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('uniway-theme');
+        if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.classList.add('dark');
+      } catch(e){}
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+  <header class="border-b border-gray-200 bg-white sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-90">
+        <img src="assets/logo.svg" alt="Политех" class="w-10 h-10">
+        <div class="leading-tight">
+          <div class="font-bold text-gray-900 tracking-tight">UniWay</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider">путеводитель первокурсника СПбПУ</div>
+        </div>
+      </a>
+      <button id="theme-toggle" class="theme-toggle ml-auto" aria-label="Переключить тему" title="Тема">
+        <span class="theme-icon-light">🌙</span><span class="theme-icon-dark">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="brand-gradient">
+      <div class="max-w-3xl mx-auto px-4 pt-12 pb-10 text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+          Привет, первокурсник <span aria-hidden="true">👋</span>
+        </h1>
+        <p class="text-gray-600 mb-6">
+          Ответы на главные вопросы про учёбу, расписание, кампусы и общежития Политеха
+        </p>
+
+        <div class="relative max-w-xl mx-auto">
+          <input id="search-input" type="text"
+            class="search-input w-full px-5 py-3 pr-14 border-2 border-gray-200 rounded-full focus:outline-none focus:border-[#1FA94F] transition"
+            placeholder="Найти ответ — например, «сессия»...">
+          <button id="search-btn"
+            class="absolute right-1.5 top-1.5 bottom-1.5 px-4 rounded-full bg-[#1FA94F] hover:bg-[#178a3f] text-white text-sm font-medium transition">
+            Найти
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Категории</h2>
+      <div id="categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="col-span-full text-center text-gray-400 py-8">Загрузка...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-200 mt-6">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-xs text-gray-500 text-center">
+      UniWay — учебный проект · СПбПУ · 2026
+    </div>
+  </footer>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена · UniWay</title>
+  <meta name="description" content="Страница не найдена. UniWay — путеводитель первокурсника СПбПУ.">
+  <meta property="og:title" content="UniWay · путеводитель первокурсника СПбПУ">
+  <meta property="og:description" content="Ответы на главные вопросы про учёбу, расписание, кампусы и общежития Политеха">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="UniWay">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('uniway-theme');
+        if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.classList.add('dark');
+      } catch(e){}
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+  <header class="border-b border-gray-200 bg-white sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-90">
+        <img src="assets/logo.svg" alt="Политех" class="w-10 h-10">
+        <div class="leading-tight">
+          <div class="font-bold text-gray-900 tracking-tight">UniWay</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider">путеводитель первокурсника СПбПУ</div>
+        </div>
+      </a>
+      <button id="theme-toggle" class="theme-toggle ml-auto" aria-label="Переключить тему" title="Тема">
+        <span class="theme-icon-light">🌙</span><span class="theme-icon-dark">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-3xl mx-auto px-4 py-16 w-full text-center">
+    <div class="text-7xl mb-4">🗺️</div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Кажется, мы заблудились</h1>
+    <p class="text-gray-500 mb-8">Такой страницы здесь нет. Возможно, ссылка устарела или содержит опечатку.</p>
+    <a href="index.html"
+       class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1FA94F] hover:bg-[#178a3f] text-white font-medium transition">
+      ← На главную
+    </a>
+  </main>
+
+  <footer class="border-t border-gray-200 mt-6">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-xs text-gray-500 text-center">
+      UniWay — учебный проект · СПбПУ · 2026
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
